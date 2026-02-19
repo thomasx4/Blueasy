@@ -1,0 +1,536 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #515f67;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(53, 63, 70, 0.85);
+            padding: 20px 0;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .container {
+            max-width: 1170px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #4bcaff;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 8px 15px;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            border-color: #4bcaff;
+            color: #4bcaff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                        url('/images/Fondo.png') center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            color: #fff;
+            font-size: 42px;
+            font-weight: 300;
+            line-height: 1.4;
+            text-transform: uppercase;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 span {
+            background: rgba(53, 63, 70, 0.8);
+            padding: 5px 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        /* Services Section */
+        .services {
+            background: #4bcaff;
+            padding: 80px 0;
+            color: #fff;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 300;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 45px;
+            height: 2px;
+            background: #fff;
+        }
+
+        .section-title.dark::after {
+            background: #515f67;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-item h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 20px 0 15px;
+            text-transform: uppercase;
+        }
+
+        .service-item p {
+            font-size: 12px;
+            line-height: 1.8;
+            font-weight: 400;
+        }
+
+        .service-icon {
+            width: 45px;
+            height: 45px;
+            fill: none;
+            stroke: #fff;
+            stroke-width: 2;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .portfolio-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .portfolio-filters {
+            display: flex;
+            gap: 25px;
+        }
+
+        .portfolio-filters button {
+            background: none;
+            border: none;
+            color: #515f67;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+            padding: 5px 15px;
+            transition: all 0.3s;
+        }
+
+        .portfolio-filters button.active,
+        .portfolio-filters button:hover {
+            color: #4bcaff;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: all 0.3s;
+        }
+
+        /* Default Section */
+        .default-section {
+            background: #515f67;
+            padding: 80px 0;
+            color: #fff;
+        }
+
+        .default-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .default-text p {
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            padding: 12px 35px;
+            border: 2px solid #353f46;
+            color: #353f46;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 700;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn-outline:hover {
+            background: #353f46;
+            color: #fff;
+        }
+
+        .default-video {
+            background: #000;
+            position: relative;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+        }
+
+        .default-video img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+
+        .video-controls {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .play-btn {
+            width: 0;
+            height: 0;
+            border-left: 12px solid #fff;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            cursor: pointer;
+        }
+
+        .progress-bar {
+            flex: 1;
+            height: 4px;
+            background: #333;
+            position: relative;
+        }
+
+        .progress-fill {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 40%;
+            background: #4bcaff;
+        }
+
+        .hd-badge {
+            background: #4bcaff;
+            color: #fff;
+            padding: 2px 6px;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        /* Twitter Section */
+        .twitter-section {
+            background: #4bcaff;
+            padding: 60px 0;
+            color: #fff;
+            position: relative;
+        }
+
+        .twitter-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .twitter-text {
+            font-size: 26px;
+            font-weight: 300;
+            line-height: 1.6;
+            max-width: 90%;
+        }
+
+        .twitter-text a {
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .twitter-icon {
+            font-size: 30px;
+            opacity: 0.8;
+        }
+
+        /* Who is John Doe */
+        .john-doe {
+            background: 
+                linear-gradient(rgba(53, 63, 70, 0.85), rgba(53, 63, 70, 0.85)),
+                url('/images/bg_whoIs.png') center/cover;
+            padding: 80px 0;
+            color: #fff;
+        }
+
+        .john-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .john-text p {
+            font-size: 13px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-weight: 300;
+            color: #d0d0d0;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            border: 2px solid #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #4bcaff;
+            border-color: #4bcaff;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: #fff;
+            padding: 60px 0;
+        }
+
+        .testimonial-content {
+            position: relative;
+            padding-right: 60px;
+        }
+
+        .quote-icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 60px;
+            color: #515f67;
+            opacity: 0.3;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            font-size: 26px;
+            font-weight: 300;
+            line-height: 1.6;
+            color: #515f67;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            color: #4bcaff;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: 
+                linear-gradient(rgba(53, 63, 70, 0.9), rgba(53, 63, 70, 0.9)),
+                url('/images/bg_contact.png') center/cover;
+            padding: 80px 0;
+            color: #fff;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #fff;
+            background: transparent;
+            color: #fff;
+            font-size: 14px;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #4bcaff;
+        }
+
+        .form-group textarea {
+            min-height: 200px;
+            resize: vertical;
+        }
+
+        .btn-submit {
+            background: #4bcaff;
+            color: #fff;
+            border: none;
+            padding: 15px 50px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-submit:hover {
+            background: #3ba8d9;
+        }
+
+        .contact-info p {
+            font-size: 13px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: #d0d0d0;
+        }
+
+        .contact-details {
+            font-size: 13px;
+            line-height: 2;
+            color: #d0d0d0;
+        }
+
+        /* Footer */
+        footer {
+            background: #353f46;
+            padding: 40px 0;
+            color: #515f67;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            color: #515f67;
+            text-decoration: none;
+            font-size: 12px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            font-size: 12px;
+        }
